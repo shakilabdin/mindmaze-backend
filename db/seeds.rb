@@ -12,11 +12,11 @@ require 'byebug'
 
 
 # FIRST API CALL WITH GENERAL CATEGORY
-c1 = Category.create(name: 'General Knowledge')
+c1 = Category.create(name: 'Books')
 # maximum of 50 questions per call
 amount = 50
-general = 9 
-token = "45369b36fc1cfe58423e98418f81b07a6e66493d7f797c4bd5e556825c66efef"
+general = 10 
+token = "91757d096373c046933b1bbc7922a69cf5ee2e321103d8bacf626b75eb459d1d"
 
 API = "https://opentdb.com/api.php?amount=#{amount}&category=#{general}&type=multiple&token=#{token}"
 
