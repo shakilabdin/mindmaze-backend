@@ -12,13 +12,14 @@ require 'byebug'
 
 
 # FIRST API CALL WITH GENERAL CATEGORY
-c1 = Category.create(name: 'Books')
+c1 = Category.create(name: 'Vehicles')
+# c1 = Category.find_by(name: 'Vehicles')
 # maximum of 50 questions per call
 amount = 50
-general = 10 
-token = "91757d096373c046933b1bbc7922a69cf5ee2e321103d8bacf626b75eb459d1d"
+topic = 28 
+token = "5ed27ef58c0cc5d8d99774fa56044361d7db047c4e2613a1e2bef161bbff5026"
 
-API = "https://opentdb.com/api.php?amount=#{amount}&category=#{general}&type=multiple&token=#{token}"
+API = "https://opentdb.com/api.php?amount=#{amount}&category=#{topic}&type=multiple&token=#{token}"
 
 response = RestClient.get(API)
 
